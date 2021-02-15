@@ -111,3 +111,31 @@ console.log(name == 'Shaun');
 console.log(name > 'crystal');
 console.log(name > 'Shaun');
 console.log(name > 'Crystal');
+// loose comparison (different types can still be equal)
+console.log(age2 == 25);
+console.log(age2 == '25');
+console.log(age2 != 25);
+console.log(age2 != '25');
+// strict comparison (different types cannot be equal)
+console.log(age2 === 25);
+console.log(age2 === '25');
+console.log(age2 !== 25);
+console.log(age2 !== '25');
+// type conversion
+let score = '100';
+score = Number(score);
+console.log(score + 1);
+console.log(typeof score);
+let result22 = Number('hello');
+console.log(result22);
+// positive numbers - truefy, 0 - falsy, negative numbers - truefy
+let result23 = String(50);
+console.log(result23, typeof result23);
+let result24 = Boolean(100);
+console.log(result24, typeof result24);
+let result25 = Boolean('0');
+console.log(result25, typeof result25);
+let result26 = Boolean(0);
+console.log(result26, typeof result26);
+let result27 = Boolean('');
+console.log(result27, typeof result27);
