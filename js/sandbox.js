@@ -84,3 +84,30 @@ console.log(result16);
 console.log(result17);
 console.log(result18);
 console.log(result19);
+// null
+let age = null;
+console.log(age, age + 3, `the age is ${age}`);
+// booleans & comparisons
+console.log(true, false, "true", "fale");
+// methods can return booleans
+let email2 = 'luigi@thenetninja.co.uk';
+let names = ['mario', 'luigi', 'toad'];
+let result20 = email.includes('@');
+let result21 = names.includes('luigi');
+console.log(result20);
+console.log(result21);
+// comparison operators
+let age2 = 25;
+console.log(age2 == 25);
+console.log(age2 == 30);
+console.log(age2 != 30);
+console.log(age2 > 20);
+console.log(age2 < 20);
+console.log(age2 <= 25);
+console.log(age2 >= 25);
+let name = 'shaun';
+console.log(name == 'shaun');
+console.log(name == 'Shaun');
+console.log(name > 'crystal');
+console.log(name > 'Shaun');
+console.log(name > 'Crystal');
