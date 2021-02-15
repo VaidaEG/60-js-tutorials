@@ -63,3 +63,24 @@ let html = `
     <span>This blog has ${likes2} likes</span>
 `;
 console.log(html);
+
+let ninjas = ['shaun', 'ryu', 'chun-li'];
+ninjas[1] = 'ken';
+console.log(ninjas[1]);
+console.log(ninjas.length);
+let ages = [20, 25, 30, 35];
+console.log(ages[2]);
+let random = ['shaun', 'crystal', 30, 20];
+console.log(random);
+// array methods
+let result15 = ninjas.join(', ');
+let result16 = ninjas.indexOf('chun-li');
+let result17 = ninjas.concat(['ken', 'crystal']);
+let result18 = ninjas.push('ken'); // return the length of a new array
+let result19 = ninjas.pop(); // return the last value of an array
+
+console.log(result15);
+console.log(result16);
+console.log(result17);
+console.log(result18);
+console.log(result19);
