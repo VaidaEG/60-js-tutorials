@@ -208,3 +208,51 @@ if (!user) {
 }
 console.log(!true);
 console.log(!false);
+// break and continue
+const scores = [50, 25, 0, 30, 100, 20, 10];
+
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i] === 0) {
+        continue;
+    }
+    console.log('your score: ', scores[i]);
+    if (scores[i] === 100) {
+        console.log('Congrats, you got the top score!');
+        break;
+    }
+}
+// switch statement
+const grade = 'D';
+
+switch(grade) {
+    case 'A':
+        console.log('you got an A');
+        break;
+    case 'B':
+        console.log('you got an B');
+        break;
+    case 'C':
+        console.log('you got an C');
+        break;
+    case 'D':
+        console.log('you got an D');
+        break;
+    case 'E':
+        console.log('you got an E');
+        break;
+    default:
+        console.log('not a valid grade');
+}
+// variables & block scope
+let age4 = 30;
+
+if (true) {
+    let age4 = 40;
+    let name = 'shaun';
+    console.log('inside 1st code block: ', age4, name);
+    if (true) {
+        let age4 = 50;
+        console.log('inside 2nd code block: ', age4);
+    }
+}
+console.log('outside code block: ', age4, name);
