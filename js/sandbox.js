@@ -139,3 +139,72 @@ let result26 = Boolean(0);
 console.log(result26, typeof result26);
 let result27 = Boolean('');
 console.log(result27, typeof result27);
+// for loops
+for (let i = 0; i < 5; i++) {
+    console.log('in loop: ', i);
+}
+console.log('loop finished');
+
+const names1 = ['shaun', 'mario', 'luigi'];
+
+for (i = 0; i < names1.length; i++) {
+    console.log(names[i]);
+    let html = `<div>${names[i]}</div>`;
+    console.log(html);
+}
+// while loops
+const names2 = ['shaun', 'mario', 'luigi'];
+let j = 0;
+// while (j < 5) {
+//     console.log('in loop: ', j);
+//     j++;
+// }
+while (j < names2.length) {
+    console.log(names2[j]);
+    j++;
+}
+// do while loop
+let k = 4;
+do {
+    console.log('val of k is: ', k);
+    k++;
+} while(k < 5);
+// if statements
+const age3 = 20;
+
+if (age3 > 20) {
+    console.log('you are over 20 years old');
+}
+
+const ninjas2 = ['shaun', 'ryu', 'chun-li', 'yoshi'];
+
+if(ninjas2.length > 3) {
+    console.log("that's a lot of ninjas");
+}
+// else if statements
+const password = 'passfdddddf';
+
+if(password.length >= 12) {
+    console.log('That password is might strong.');
+} else if (password.length >= 8) {
+    console.log('That password is long enough!');
+} else {
+    console.log('Password is not long enough!');
+}
+// logical operators - OR || and AND &&
+const password2 = 'p@df';
+
+if(password2.length >= 12 && password2.includes('@')) {
+    console.log('That password is might strong.');
+} else if (password2.length >= 8 || password2.includes('@') && password2.length > 5) {
+    console.log('That password is strong enough!');
+} else {
+    console.log('Password is not strong enough!');
+}
+// logical NOT (!)
+let user = false;
+if (!user) {
+    console.log('you must be logged in to continue');
+}
+console.log(!true);
+console.log(!false);
