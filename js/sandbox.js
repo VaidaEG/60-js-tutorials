@@ -256,3 +256,105 @@ if (true) {
     }
 }
 console.log('outside code block: ', age4, name);
+//function declaration
+function greet() {
+    console.log('hello there');
+}
+// function expression
+const speak = function() {
+    console.log('good day');
+};
+greet();
+speak();
+// arguments & parameters
+const speak2 = function(name = 'Luigi', time = 'night') {
+    console.log(`good ${time} ${name}`);
+}
+speak2();
+speak2('Shaun');
+speak2('Mario', 'morning');
+// returning values
+const speak3 = function(name = 'Luigi', time = 'night') {
+    console.log(`good ${time} ${name}`);
+};
+const calcArea  = function(radius) {
+    return 3.14 * radius**2;
+};
+let a = calcArea(5);
+console.log(a);
+// regular functions
+const calcArea2 = function (radius) {
+    return 3.14 * radius**2;
+}
+// arrow functions
+const calcArea3 = (radius) => {
+    return 3.14 * radius**2;
+};
+// if we have only one parameter
+const calcArea4 = radius => {
+    return 3.14 * radius**2;
+};
+// if we don't have any parameters
+const calcArea5 = () => {
+    return 3.14 * radius**2;
+};
+// shorter way
+const calcArea6 = radius => 3.14 * radius**2;
+
+const area = calcArea2(5);
+console.log('area is: ', area);
+const area2 = calcArea3(6);
+console.log('area is: ', area2);
+const area3 = calcArea4(8);
+console.log('area is: ', area3);
+const bill = function(products, tax) {
+    let total = 0;
+    for (let i = 0; i < products.length; i++) {
+        total += products[i] + products[i] * tax;
+    }
+    return total;
+}
+const bill2 = (products, tax) => {
+    let total = 0;
+    for (let i = 0; i < products.length; i++) {
+        total += products[i] + products[i] * tax;
+    }
+    return total;
+};
+console.log(bill([10,15,30], 0.21));
+console.log(bill2([10,15,30], 0.21));
+const name2 = 'Shaun';
+// functions
+const greet2 = () => 'hello';
+let resultOne = greet2();
+console.log(resultOne);
+// methods
+let resultTwo = name2.toUpperCase();
+console.log(resultTwo);
+// callbacks & foreach
+const myFunc = (callbackFunc) => {
+    // do something
+    let value = 50;
+    callbackFunc(value);
+};
+myFunc(function(value) {
+    // do something
+    console.log(value);
+});
+let people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+const logPerson = (person, index) => {
+    console.log(`${index} - hello ${person}`);
+}
+people.forEach(logPerson);
+// get a reference to the 'ul'
+const ul = document.querySelector('.people');
+
+const people2 = ['Mario', 'Luigi', 'Ryu', 'Shaun', 'Shun-li'];
+let html2 = ``;
+
+people2.forEach(person => {
+    // creat html template
+    html2 += `<li style="color: purple;">${person}</li>`;
+})
+console.log(html2);
+ul.innerHTML = html2;
