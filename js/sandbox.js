@@ -358,3 +358,74 @@ people2.forEach(person => {
 })
 console.log(html2);
 ul.innerHTML = html2;
+// object literals
+let user2 = {
+    name: 'crystal',
+    age: 30,
+    email: 'crystal@thenetninja.co.uk',
+    blogs: [
+        { title: 'why mac & cheese rules', likes: 30 },
+        { title: '10 things to make with marmite', likes: 50 }
+    ],
+    login() {
+        console.log('the user logged in');
+    },
+    logout() {
+        console.log('the user logged out');
+    },
+    logBlogs() {
+        // console.log(this.blogs);
+        console.log('this user has written the following blogs:');
+        this.blogs.forEach(blog => {
+            console.log(blog.title, blog.likes);
+        });
+    }
+};
+console.log(user2);
+console.log(user2.name);
+user2.age = 35;
+console.log(user2.age);
+console.log(user2['name']);
+console.log(user2['email']);
+user2['name'] = 'chun-li';
+console.log(user2['name']);
+const key = 'location';
+console.log(user2[key]);
+console.log(typeof user2);
+user2.login();
+user2.logout();
+user2.logBlogs();
+const name10 = 'mario';
+name10.toUpperCase();
+
+// const blogs = [
+//     { title: 'why mac & cheese rules', likes: 30 },
+//     { title: '10 things to make with marmite', likes: 50 }
+// ];
+// console.log(blogs);
+
+// Math object
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+const area4 = 7.7;
+console.log(Math.round(area4));
+console.log(Math.floor(area4));
+console.log(Math.ceil(area4));
+console.log(Math.trunc(area4));
+// random numbers
+const random2 = Math.random();
+console.log(random2);
+console.log(Math.round(random2 * 100));
+// primitive values
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+console.log(`scoreOne: ${scoreOne}, scoreTwo: ${scoreTwo}`);
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}, scoreTwo: ${scoreTwo}`);
+// reference values
+const userOne = { name: 'ryu', age: 30};
+const userTwo = userOne;
+console.log(userOne, userTwo);
+userOne.age = 40;
+console.log(userOne, userTwo);
