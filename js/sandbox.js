@@ -429,3 +429,18 @@ const userTwo = userOne;
 console.log(userOne, userTwo);
 userOne.age = 40;
 console.log(userOne, userTwo);
+// DOM - Document Object Model
+const para = document.querySelector('p');
+console.log(para);
+const para2 = document.querySelector('.error');
+console.log(para2);
+const para3 = document.querySelector('div.error');
+console.log(para3);
+const paras = document.querySelectorAll('p');
+paras.forEach(para => {
+    console.log(para);
+});
+console.log(paras);
+console.log(paras[0]);
+const errors = document.querySelectorAll('.error');
+console.log(errors);
