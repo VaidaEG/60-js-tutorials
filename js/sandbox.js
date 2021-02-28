@@ -444,3 +444,64 @@ console.log(paras);
 console.log(paras[0]);
 const errors = document.querySelectorAll('.error');
 console.log(errors);
+// get an element by ID
+const title2 = document.getElementById('page-title');
+console.log(title2);
+// get element by their class name
+const errors2 = document.getElementsByClassName('error');
+console.log(errors2);
+console.log(errors2[0]);
+// get elements by their tag name
+const paras2 = document.getElementsByTagName('p');
+console.log(paras2);
+console.log(paras2[1]);
+const para4 = document.querySelector('p');
+console.log(para4.innerText);
+para4.innerText = 'Ninjas are awesame!';
+para4.innerText += ' Realy!';
+const paras3 = document.querySelectorAll('p');
+paras3.forEach(para => {
+    console.log(para.innerText);
+    para.innerText += ' new text';
+});
+const content = document.querySelector('.content');
+console.log(content.innerHTML);
+content.innerHTML = '<h2>This is a new h2</h2>';
+const people3 = ['mario', 'luigi', 'yoshi'];
+people.forEach(person => {
+    content.innerHTML += `<p>${person}</p>`;
+});
+const link = document.querySelector('a');
+console.log(link.getAttribute('href'));
+link.setAttribute('href', 'https://www.thenetninja.co.uk');
+link.innerText = 'The Net Ninja Website';
+const mssg = document.querySelector('div');
+console.log(mssg.getAttribute('class'));
+mssg.setAttribute('class', 'success');
+console.log(mssg.getAttribute('class'));
+mssg.setAttribute('style', 'color: green;');
+const title3 = document.querySelector('h1');
+title3.setAttribute('style', 'margin: 50px');
+console.log(title3.style);
+console.log(title3.style.margin);
+title3.style.color = 'orange';
+title3.style.textTransform = 'uppercase';
+title3.style.fontSize = '50px';
+title3.style.margin = '';
+const content2 = document.querySelector('p');
+console.log(content2.classList);
+content2.classList.add('error');
+content2.classList.remove('error');
+content2.classList.add('success');
+const paras4 = document.querySelectorAll('p');
+paras4.forEach(para => {
+    if (para.textContent.includes('error')) {
+        para.classList.add('error');
+    }
+    if (para.textContent.includes('success')) {
+        para.classList.add('success');
+    }
+});
+const title4 = document.querySelector('.title');
+title4.classList.toggle('test');
+title4.classList.toggle('test');
